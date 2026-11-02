@@ -1,0 +1,256 @@
+{
+  "checkout": {
+    "children": [
+      "flex-layout.row#checkout-progress",
+      "flex-layout.row#checkout-main-content",
+      "flex-layout.row#checkout-summary"
+    ]
+  },
+  "flex-layout.row#checkout-progress": {
+    "props": {
+      "blockClass": "checkout-progress",
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "marginTop": 5,
+      "marginBottom": 5
+    },
+    "children": [
+      "checkout-progress.stepper"
+    ]
+  },
+  "flex-layout.row#checkout-main-content": {
+    "props": {
+      "blockClass": "checkout-main-content",
+      "fullWidth": true,
+      "colGap": 7,
+      "rowGap": 7,
+      "marginBottom": 7
+    },
+    "children": [
+      "flex-layout.col#checkout-form",
+      "flex-layout.col#checkout-sidebar"
+    ]
+  },
+  "flex-layout.col#checkout-form": {
+    "props": {
+      "blockClass": "checkout-form-column",
+      "width": "grow",
+      "verticalSpacing": 6
+    },
+    "children": [
+      "checkout-customer-info",
+      "checkout-shipping-address",
+      "checkout-payment-method"
+    ]
+  },
+  "flex-layout.col#checkout-sidebar": {
+    "props": {
+      "blockClass": "checkout-sidebar-column",
+      "width": "shelf",
+      "verticalSpacing": 6
+    },
+    "children": [
+      "checkout-order-summary"
+    ]
+  },
+  "flex-layout.row#checkout-summary": {
+    "props": {
+      "blockClass": "checkout-summary-row",
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "marginTop": 7,
+      "marginBottom": 7
+    },
+    "children": [
+      "checkout-place-order-button"
+    ]
+  },
+  "checkout-customer-info": {
+    "props": {
+      "blockClass": "customer-info-section",
+      "title": "Información del Cliente"
+    },
+    "children": [
+      "checkout-customer-email",
+      "checkout-customer-document"
+    ]
+  },
+  "checkout-customer-email": {
+    "props": {
+      "blockClass": "customer-email-input",
+      "placeholder": "correo@ejemplo.com",
+      "label": "Correo Electrónico",
+      "required": true
+    }
+  },
+  "checkout-customer-document": {
+    "props": {
+      "blockClass": "customer-document-input",
+      "placeholder": "12345678",
+      "label": "Documento de Identidad",
+      "required": true
+    }
+  },
+  "checkout-shipping-address": {
+    "props": {
+      "blockClass": "shipping-address-section",
+      "title": "Dirección de Envío"
+    },
+    "children": [
+      "checkout-address-street",
+      "checkout-address-number",
+      "checkout-address-complement",
+      "checkout-address-neighborhood",
+      "checkout-address-city",
+      "checkout-address-state",
+      "checkout-address-zipcode"
+    ]
+  },
+  "checkout-address-street": {
+    "props": {
+      "blockClass": "address-street-input",
+      "placeholder": "Nombre de la calle",
+      "label": "Calle",
+      "required": true
+    }
+  },
+  "checkout-address-number": {
+    "props": {
+      "blockClass": "address-number-input",
+      "placeholder": "123",
+      "label": "Número",
+      "required": true
+    }
+  },
+  "checkout-address-complement": {
+    "props": {
+      "blockClass": "address-complement-input",
+      "placeholder": "Apartamento,suite,etc.",
+      "label": "Complemento",
+      "required": false
+    }
+  },
+  "checkout-address-neighborhood": {
+    "props": {
+      "blockClass": "address-neighborhood-input",
+      "placeholder": "Barrio",
+      "label": "Barrio",
+      "required": true
+    }
+  },
+  "checkout-address-city": {
+    "props": {
+      "blockClass": "address-city-input",
+      "placeholder": "Ciudad",
+      "label": "Ciudad",
+      "required": true
+    }
+  },
+  "checkout-address-state": {
+    "props": {
+      "blockClass": "address-state-select",
+      "label": "Estado/Provincia",
+      "required": true,
+      "options": [
+        {"value": "", "label": "Seleccionar"},
+        {"value": "SP", "label": "São Paulo"},
+        {"value": "RJ", "label": "Rio de Janeiro"},
+        {"value": "MG", "label": "Minas Gerais"},
+        {"value": "RS", "label": "Rio Grande do Sul"}
+      ]
+    }
+  },
+  "checkout-address-zipcode": {
+    "props": {
+      "blockClass": "address-zipcode-input",
+      "placeholder": "00000-000",
+      "label": "Código Postal",
+      "required": true
+    }
+  },
+  "checkout-payment-method": {
+    "props": {
+      "blockClass": "payment-method-section",
+      "title": "Método de Pago"
+    },
+    "children": [
+      "checkout-payment-options",
+      "checkout-payment-integration"
+    ]
+  },
+  "checkout-payment-options": {
+    "props": {
+      "blockClass": "payment-options-container",
+      "paymentMethods": [
+        "creditCard",
+        "debitCard",
+        "boleto",
+        "pix"
+      ]
+    }
+  },
+  "checkout-payment-integration": {
+    "props": {
+      "blockClass": "payment-integration-container"
+    }
+  },
+  "checkout-order-summary": {
+    "props": {
+      "blockClass": "order-summary-section",
+      "title": "Resumen del Pedido",
+      "showItems": true,
+      "showShipping": true,
+      "showTax": true
+    },
+    "children": [
+      "checkout-order-items",
+      "checkout-order-totals"
+    ]
+  },
+  "checkout-order-items": {
+    "props": {
+      "blockClass": "order-items-list"
+    }
+  },
+  "checkout-order-totals": {
+    "props": {
+      "blockClass": "order-totals-container",
+      "showSubtotal": true,
+      "showShipping": true,
+      "showDiscount": true,
+      "showTax": true,
+      "showTotal": true
+    }
+  },
+  "checkout-place-order-button": {
+    "props": {
+      "blockClass": "place-order-button",
+      "label": "Realizar Pedido",
+      "size": "large",
+      "fullWidth": true,
+      "disabled": false
+    }
+  },
+  "checkout-progress.stepper": {
+    "props": {
+      "blockClass": "checkout-stepper",
+      "steps": [
+        {
+          "label": "Cliente",
+          "active": true,
+          "completed": false
+        },
+        {
+          "label": "Envío",
+          "active": false,
+          "completed": false
+        },
+        {
+          "label": "Pago",
+          "active": false,
+          "completed": false
+        }
+      ]
+    }
+  }
+}

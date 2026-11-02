@@ -1,0 +1,64 @@
+{
+  "vendor": "vtex",
+  "name": "store-theme",
+  "version": "1.0.0",
+  "builders": {
+    "react": "3.x",
+    "store": "4.x",
+    "styles": "2.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.store": "2.x",
+    "vtex.checkout-ui-custom": "0.x",
+    "vtex.product-summary": "2.x",
+    "vtex.product-details": "2.x",
+    "vtex.store-components": "3.x",
+    "vtex.store-header": "2.x",
+    "vtex.product-specifications": "1.x",
+    "vtex.product-quantity": "1.x",
+    "vtex.store-footer": "2.x",
+    "vtex.store-icons": "0.x",
+    "vtex.modal-layout": "0.x",
+    "vtex.product-review-interfaces": "1.x",
+    "vtex.product-review": "2.x"
+  },
+  "policies": [
+    {
+      "name": "vtex.styleguide",
+      "version": "9.x",
+      "dependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "@types/react": "18.2.45",
+        "@types/react-dom": "18.2.18",
+        "typescript": "5.3.3"
+      }
+    }
+  ],
+  "settings": {
+    "store": {
+      "title": "VTEX Store",
+      "description": "Store theme for VTEX IO",
+      "keywords": ["ecommerce", "vtex", "store"],
+      "themeColor": "#1a237e"
+    }
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "scripts": {
+    "lint": "vtex lint",
+    "test": "vtex test --coverage",
+    "prepublish": "vtex publish"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "product-summary": {
+    "component": "ProductSummary",
+    "composition": "view",
+    "render": "client",
+    "allowed": [
+      "product-summary-name",
+      "product-summary-description",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-add-to-cart-button",
+      "product-summary-specifications",
+      "product-summary-short-description",
+      "product-summary-availability",
+      "product-summary-quantity"
+    ],
+    "contentLists": {
+      "products": {
+        "isLayout": false,
+        "isArray": true,
+        "maxSize": 10
+      }
+    },
+    "properties": {
+      "showBadge": {
+        "type": "boolean",
+        "default": true
+      },
+      "showDescription": {
+        "type": "boolean",
+        "default": false
+      },
+      "showPrice": {
+        "type": "boolean",
+        "default": true
+      },
+      "showImage": {
+        "type": "boolean",
+        "default": true
+      },
+      "showAddToCartButton": {
+        "type": "boolean",
+        "default": true
+      },
+      "showQuantitySelector": {
+        "type": "boolean",
+        "default": false
+      },
+      "imageAspectRatio": {
+        "type": "string",
+        "default": "1:1"
+      },
+      "priceDisplay": {
+        "type": "enum",
+        "values": ["sellingPrice", "listPrice", "both"],
+        "default": "sellingPrice"
+      }
+    }
+  },
+  "product-summary-name": {
+    "component": "ProductSummaryName",
+    "composition": "view",
+    "render": "client"
+  },
+  "product-summary-description": {
+    "component": "ProductSummaryDescription",
+    "composition": "view",
+    "render": "client"
+  },
+  "product-summary-image": {
+    "component": "ProductSummaryImage",
+    "composition": "view",
+    "render": "client"
+  },
+  "product-summary-price": {
+    "component": "ProductSummaryPrice",
+    "composition": "view",
+    "render": "client"
+  },
+  "product-summary-add-to-cart-button": {
+    "component": "ProductSummaryAddToCartButton",
+    "composition": "view",
+    "render": "client"
+  },
+  "product-summary-quantity": {
+    "component": "ProductSummaryQuantity",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart": {
+    "component": "Cart",
+    "composition": "view",
+    "render": "client",
+    "allowed": [
+      "cart-items",
+      "cart-total",
+      "cart-footer",
+      "cart-title",
+      "cart-empty",
+      "cart-item-images",
+      "cart-item-summary",
+      "cart-item-quantity",
+      "cart-item-remove",
+      "checkout-button",
+      "continue-shopping-button"
+    ],
+    "properties": {
+      "showCartTitle": {
+        "type": "boolean",
+        "default": true
+      },
+      "showFooter": {
+        "type": "boolean",
+        "default": true
+      },
+      "showItemImages": {
+        "type": "boolean",
+        "default": true
+      },
+      "showItemRemoveButton": {
+        "type": "boolean",
+        "default": true
+      },
+      "showCheckoutButton": {
+        "type": "boolean",
+        "default": true
+      },
+      "showContinueShopping": {
+        "type": "boolean",
+        "default": true
+      },
+      "showItemsQuantity": {
+        "type": "boolean",
+        "default": true
+      },
+      "minItemsToCheckout": {
+        "type": "number",
+        "default": 1
+      },
+      "removeItemConfirmation": {
+        "type": "boolean",
+        "default": true
+      },
+      "titleText": {
+        "type": "string",
+        "default": "Mi Carrito"
+      },
+      "emptyStateMessage": {
+        "type": "string",
+        "default": "Tu carrito está vacío"
+      }
+    }
+  },
+  "cart-items": {
+    "component": "CartItems",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-total": {
+    "component": "CartTotal",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-footer": {
+    "component": "CartFooter",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-item-images": {
+    "component": "CartItemImages",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-item-summary": {
+    "component": "CartItemSummary",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-item-quantity": {
+    "component": "CartItemQuantity",
+    "composition": "view",
+    "render": "client"
+  },
+  "cart-item-remove": {
+    "component": "CartItemRemove",
+    "composition": "view",
+    "render": "client"
+  },
+  "checkout-button": {
+    "component": "CheckoutButton",
+    "composition": "view",
+    "render": "client"
+  },
+  "continue-shopping-button": {
+    "component": "ContinueShoppingButton",
+    "composition": "view",
+    "render": "client"
+  }
+}

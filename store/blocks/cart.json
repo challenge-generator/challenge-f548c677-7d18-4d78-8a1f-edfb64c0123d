@@ -1,0 +1,283 @@
+{
+  "cart": {
+    "children": [
+      "cart-title",
+      "cart-items",
+      "cart-footer"
+    ],
+    "props": {
+      "showCartTitle": true,
+      "showFooter": true,
+      "showItemImages": true,
+      "showItemRemoveButton": true,
+      "showCheckoutButton": true,
+      "showContinueShopping": true,
+      "showItemsQuantity": true,
+      "minItemsToCheckout": 1,
+      "removeItemConfirmation": true,
+      "titleText": "Mi Carrito",
+      "emptyStateMessage": "Tu carrito está vacío"
+    }
+  },
+  "cart-title": {
+    "props": {
+      "text": "Mi Carrito",
+      "showIcon": true,
+      "iconName": "Cart",
+      "iconSize": 24
+    }
+  },
+  "cart-items": {
+    "children": [
+      "flex-layout.row#cart-items-header",
+      "cart-item-images",
+      "cart-item-summary",
+      "cart-item-quantity",
+      "cart-item-remove"
+    ],
+    "props": {
+      "blockClass": "cart-items-container",
+      "itemsPerRow": 1,
+      "separatorClass": "cart-items-separator"
+    }
+  },
+  "flex-layout.row#cart-items-header": {
+    "children": [
+      "flex-layout.col#header-product",
+      "flex-layout.col#header-price",
+      "flex-layout.col#header-quantity",
+      "flex-layout.col#header-total",
+      "flex-layout.col#header-actions"
+    ],
+    "props": {
+      "blockClass": "cart-items-header",
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#header-product": {
+    "children": [
+      "rich-text#header-product"
+    ],
+    "props": {
+      "width": "grow",
+      "blockClass": "header-product-col"
+    }
+  },
+  "flex-layout.col#header-price": {
+    "children": [
+      "rich-text#header-price"
+    ],
+    "props": {
+      "width": "15%",
+      "blockClass": "header-price-col"
+    }
+  },
+  "flex-layout.col#header-quantity": {
+    "children": [
+      "rich-text#header-quantity"
+    ],
+    "props": {
+      "width": "15%",
+      "blockClass": "header-quantity-col"
+    }
+  },
+  "flex-layout.col#header-total": {
+    "children": [
+      "rich-text#header-total"
+    ],
+    "props": {
+      "width": "15%",
+      "blockClass": "header-total-col"
+    }
+  },
+  "flex-layout.col#header-actions": {
+    "children": [],
+    "props": {
+      "width": "10%",
+      "blockClass": "header-actions-col"
+    }
+  },
+  "rich-text#header-product": {
+    "props": {
+      "text": "Producto",
+      "textAlignment": "left",
+      "textPosition": "left"
+    }
+  },
+  "rich-text#header-price": {
+    "props": {
+      "text": "Precio",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "rich-text#header-quantity": {
+    "props": {
+      "text": "Cantidad",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "rich-text#header-total": {
+    "props": {
+      "text": "Total",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "cart-item-images": {
+    "props": {
+      "imageHeight": 80,
+      "imageWidth": 80,
+      "aspectRatio": "1:1",
+      "maxHeight": 80
+    }
+  },
+  "cart-item-summary": {
+    "props": {
+      "showName": true,
+      "showSku": true,
+      "showBrandName": false,
+      "showAssemblyOptions": true
+    }
+  },
+  "cart-item-quantity": {
+    "props": {
+      "selectorType": "dropdown",
+      "showLabel": true,
+      "quantityLabel": "Cantidad",
+      "maxQuantity": 10
+    }
+  },
+  "cart-item-remove": {
+    "props": {
+      "showLabel": true,
+      "labelText": "Eliminar",
+      "confirmDialogTitle": "¿Eliminar producto?",
+      "confirmDialogMessage": "¿Estás seguro de que quieres eliminar este producto del carrito?",
+      "confirmButtonText": "Sí, eliminar",
+      "cancelButtonText": "Cancelar"
+    }
+  },
+  "cart-footer": {
+    "children": [
+      "flex-layout.row#cart-footer-main"
+    ],
+    "props": {
+      "blockClass": "cart-footer-container"
+    }
+  },
+  "flex-layout.row#cart-footer-main": {
+    "children": [
+      "flex-layout.col#cart-totals",
+      "flex-layout.col#cart-actions"
+    ],
+    "props": {
+      "blockClass": "cart-footer-row",
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#cart-totals": {
+    "children": [
+      "cart-total"
+    ],
+    "props": {
+      "width": "grow",
+      "blockClass": "cart-totals-col"
+    }
+  },
+  "flex-layout.col#cart-actions": {
+    "children": [
+      "checkout-button",
+      "continue-shopping-button"
+    ],
+    "props": {
+      "width": "auto",
+      "blockClass": "cart-actions-col"
+    }
+  },
+  "checkout-button": {
+    "props": {
+      "text": "Ir al checkout",
+      "blockClass": "checkout-button",
+      "size": "large",
+      "customColor": "#000000",
+      "customIconColor": "#ffffff"
+    }
+  },
+  "continue-shopping-button": {
+    "props": {
+      "text": "Seguir comprando",
+      "blockClass": "continue-shopping-button",
+      "size": "regular",
+      "displayMode": "button"
+    }
+  },
+  "cart-total": {
+    "props": {
+      "showSubtotal": true,
+      "showTotal": true,
+      "showShipping": false,
+      "showTaxes": false,
+      "subtotalLabel": "Subtotal",
+      "totalLabel": "Total"
+    }
+  },
+  "cart#minicart": {
+    "children": [
+      "cart-items",
+      "cart-footer"
+    ],
+    "props": {
+      "showCartTitle": false,
+      "showFooter": true,
+      "showItemImages": true,
+      "showItemRemoveButton": true,
+      "showCheckoutButton": true,
+      "showContinueShopping": false,
+      "showItemsQuantity": true,
+      "minItemsToCheckout": 1,
+      "removeItemConfirmation": false
+    }
+  },
+  "cart#sidebar": {
+    "children": [
+      "cart-title",
+      "cart-items",
+      "cart-footer"
+    ],
+    "props": {
+      "showCartTitle": true,
+      "showFooter": true,
+      "showItemImages": true,
+      "showItemRemoveButton": true,
+      "showCheckoutButton": true,
+      "showContinueShopping": true,
+      "showItemsQuantity": true,
+      "minItemsToCheckout": 1,
+      "removeItemConfirmation": true
+    }
+  },
+  "cart#page": {
+    "children": [
+      "cart-title",
+      "cart-items",
+      "cart-footer"
+    ],
+    "props": {
+      "showCartTitle": true,
+      "showFooter": true,
+      "showItemImages": true,
+      "showItemRemoveButton": true,
+      "showCheckoutButton": true,
+      "showContinueShopping": true,
+      "showItemsQuantity": true,
+      "minItemsToCheckout": 1,
+      "removeItemConfirmation": true,
+      "titleText": "Carrito de Compras",
+      "emptyStateMessage": "Tu carrito está vacío. ¡Explora nuestros productos!"
+    }
+  }
+}
